@@ -65,8 +65,8 @@ public class ListActivity extends AppCompatActivity {
             while (cursor.moveToNext()){
 
                 int sno = cursor.getInt(0);
-                String username = cursor.getString(1);
-                String userid = cursor.getString(2);
+                String username = cursor.getString(2);
+                String userid = cursor.getString(1);
                 String userpw = cursor.getString(3);
                 String usermajor = cursor.getString(4);
                 String usertel = cursor.getString(5);
@@ -147,10 +147,60 @@ public class ListActivity extends AppCompatActivity {
         }
     });
 
+    btn_search.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+
+
+
+                    try {
+                        DB = studentInfo.getReadableDatabase();
+                        String query = "SELECT sno, usename, userid, userpw, usermajor, usertel FROM student where usename = '" + edit_search.getText().toString() + "';";
+                        Cursor cursor = DB.rawQuery(query, null);
+                        StringBuffer stringBuffer = new StringBuffer();
+
+                        while (cursor.moveToNext()) {
+
+                            int sno = cursor.getInt(0);
+                            String username = cursor.getString(2);
+                            String userid = cursor.getString(1);
+                            String userpw = cursor.getString(3);
+                            String usermajor = cursor.getString(4);
+                            String usertel = cursor.getString(5);
+
+                            student = new Student(sno, username, userid, userpw, usermajor, usertel);
+                            data.add(student);
+
+                        }
+
+                        cursor.close();
+                        studentInfo.close();
+                        Toast.makeText(ListActivity.this, "Select Ok", Toast.LENGTH_SHORT).show();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        Toast.makeText(ListActivity.this, "select Error", Toast.LENGTH_SHORT).show();
+                    }
+
+
+                    adapter = new StudentAdapter(ListActivity.this, R.layout.activity_list, data);
+                    listView.setAdapter(adapter);
+
+
+
+
+            }
+
+    });
+
 
 
 
     }
+
+
+
+
+
 
 
 
