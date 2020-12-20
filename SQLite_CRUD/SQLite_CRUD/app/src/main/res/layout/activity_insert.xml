@@ -84,6 +84,11 @@
                 android:gravity="center"
                 android:background="@color/white"
                 android:layout_marginRight="30dp"
+                android:singleLine="true"
+                android:imeOptions="actionDone"
+
+
+
 
                 />
         </LinearLayout>
@@ -126,6 +131,7 @@
                     android:gravity="center"
                     android:background="@color/white"
                     android:layout_marginRight="30dp"
+                    android:singleLine="true"
                     />
 
             </LinearLayout>
@@ -178,6 +184,8 @@
                     android:inputType="textPassword"
                     android:background="@color/white"
                     android:layout_marginRight="30dp"
+                    android:singleLine="true"
+
                     />
 
             </LinearLayout>
@@ -230,6 +238,8 @@
                     android:inputType="number"
                     android:background="@color/white"
                     android:layout_marginRight="30dp"
+                    android:singleLine="true"
+
                     />
 
 
@@ -273,6 +283,8 @@
                         android:gravity="center"
                         android:background="@color/white"
                         android:layout_marginRight="30dp"
+                        android:singleLine="true"
+
                         />
 
                 </LinearLayout>
