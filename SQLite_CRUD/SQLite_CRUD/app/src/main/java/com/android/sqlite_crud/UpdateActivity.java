@@ -40,12 +40,19 @@ public class UpdateActivity extends Activity {
         String usertel = intent.getStringExtra("usertel");
         String usermajor = intent.getStringExtra("usermajor");
 
+        modi_sno = findViewById(R.id.modi_sno);
+        modi_userid = findViewById(R.id.modi_userid);
+        modi_userpw = findViewById(R.id.modi_userpw);
+        modi_username = findViewById(R.id.modi_username);
+        modi_usertel = findViewById(R.id.modi_usertel);
+        modi_usermajor = findViewById(R.id.modi_usermajor);
+
         modi_sno.setText(sno);
-        modi_sno.setText(userid);
-        modi_sno.setText(userpw);
-        modi_sno.setText(username);
-        modi_sno.setText(usertel);
-        modi_sno.setText(usermajor);
+        modi_userid.setText(userid);
+        modi_userpw.setText(userpw);
+        modi_username.setText(username);
+        modi_usertel.setText(usertel);
+        modi_usermajor.setText(usermajor);
     }
 
 
@@ -54,7 +61,6 @@ public class UpdateActivity extends Activity {
         SQLiteDatabase DB; // 이걸 선언해줘야 SQL 명령어를 쓸수 있다.
         @Override
         public void onClick(View v) {
-            modi_sno = findViewById(R.id.modi_sno);
             modi_userid = findViewById(R.id.modi_userid);
             modi_userpw = findViewById(R.id.modi_userpw);
             modi_username = findViewById(R.id.modi_username);
@@ -66,17 +72,24 @@ public class UpdateActivity extends Activity {
                     || modi_username.getText().toString().length() == 0 || modi_usertel.getText().toString().length() == 0
                     || modi_usermajor.getText().toString().length() == 0){
 
-                    Toast.makeText(UpdateActivity.this,"빈칸을 모두 입력하세요", Toast.LENGTH_SHORT).show();
+                Toast.makeText(UpdateActivity.this,"빈칸을 모두 입력하세요", Toast.LENGTH_SHORT).show();
             }else{
                 try {
 //                        getReadableDatabase()
 //                        이력 수정 삭제에서
                     DB = studentInfo.getWritableDatabase(); // 입력 수정 삭제는 똑같다. 포멧+
-                    String query = "UPDATE student SET username = '"+ modi_username.getText().toString() + "' WHERE id = '" + modi_sno.getText().toString() + "' ;";
+                    String query = "UPDATE student SET usename = '"+ modi_username.getText().toString() +  "', userid = '"+ modi_userid.getText().toString()
+                            +"',userpw = '"+modi_userpw.getText().toString()+"',usermajor = '"
+                            +modi_usermajor.getText().toString()+"',usertel='"+modi_usertel.getText().toString()+"' WHERE sno = "
+                            + Integer.parseInt(modi_sno.getText().toString()) + " ;";
                     DB.execSQL(query);
                     studentInfo.close();
+
                     Toast.makeText(UpdateActivity.this,"Completely Modified", Toast.LENGTH_SHORT).show();
 
+                    intent = new Intent(UpdateActivity.this,ListActivity.class);
+                    startActivity(intent);
+                    overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
 
                 }catch (Exception e){
                     e.printStackTrace();
@@ -84,9 +97,7 @@ public class UpdateActivity extends Activity {
                 }
 
             }
-            intent = new Intent(UpdateActivity.this,ListActivity.class);
-            startActivity(intent);
-            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+
 
         }
     };

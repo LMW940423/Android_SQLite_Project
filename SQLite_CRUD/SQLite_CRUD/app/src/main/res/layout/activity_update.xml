@@ -34,18 +34,18 @@
         android:orientation="horizontal"
         >
 
-    <TextView
-        android:layout_marginTop="140dp"
-        android:text="Roll_Number "
-        android:textColor="@color/white"
-        android:textSize="15dp"
-        android:shadowColor="#fff"
-        android:shadowDx="22"
-        android:shadowDy="22"
-        android:shadowRadius="22"
-        android:layout_marginLeft="60dp"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"/>
+        <TextView
+            android:layout_marginTop="140dp"
+            android:text="Roll_Number "
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:shadowColor="#fff"
+            android:shadowDx="22"
+            android:shadowDy="22"
+            android:shadowRadius="22"
+            android:layout_marginLeft="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"/>
 
         <EditText
             android:id="@+id/modi_sno"
@@ -67,19 +67,20 @@
         android:layout_marginTop="10dp"
         >
 
-    <TextView
-        android:shadowColor="#fff"
-        android:shadowDx="22"
-        android:shadowDy="22"
-        android:shadowRadius="22"
-        android:text="User_ID "
-        android:textColor="@color/white"
-        android:textSize="15dp"
-        android:layout_marginLeft="60dp"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"/>
+        <TextView
+            android:shadowColor="#fff"
+            android:shadowDx="22"
+            android:shadowDy="22"
+            android:shadowRadius="22"
+            android:text="User_ID "
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:layout_marginLeft="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"/>
 
         <EditText
+            android:enabled="false"
             android:textStyle="bold"
             android:textSize="12dp"
             android:textColor="@color/black"
@@ -99,19 +100,21 @@
         android:layout_marginTop="10dp"
         >
 
-    <TextView
-        android:shadowColor="#fff"
-        android:shadowDx="22"
-        android:shadowDy="22"
-        android:shadowRadius="22"
-        android:text="Password "
-        android:textColor="@color/white"
-        android:textSize="15dp"
-        android:layout_marginLeft="60dp"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"/>
+        <TextView
+            android:shadowColor="#fff"
+            android:shadowDx="22"
+            android:shadowDy="22"
+            android:shadowRadius="22"
+            android:text="Password "
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:layout_marginLeft="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"/>
 
         <EditText
+
+            android:inputType="textPassword"
             android:textStyle="bold"
             android:textSize="12dp"
             android:textColor="@color/black"
@@ -132,17 +135,17 @@
 
         >
 
-    <TextView
-        android:shadowColor="#fff"
-        android:shadowDx="22"
-        android:shadowDy="22"
-        android:shadowRadius="22"
-        android:text="Name "
-        android:textColor="@color/white"
-        android:textSize="15dp"
-        android:layout_marginLeft="60dp"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"/>
+        <TextView
+            android:shadowColor="#fff"
+            android:shadowDx="22"
+            android:shadowDy="22"
+            android:shadowRadius="22"
+            android:text="Name "
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:layout_marginLeft="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"/>
 
         <EditText
             android:textStyle="bold"
@@ -166,17 +169,17 @@
 
         >
 
-    <TextView
-        android:shadowColor="#fff"
-        android:shadowDx="22"
-        android:shadowDy="22"
-        android:shadowRadius="22"
-        android:text="Tel_Number "
-        android:textColor="@color/white"
-        android:textSize="15dp"
-        android:layout_marginLeft="60dp"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"/>
+        <TextView
+            android:shadowColor="#fff"
+            android:shadowDx="22"
+            android:shadowDy="22"
+            android:shadowRadius="22"
+            android:text="Tel_Number "
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:layout_marginLeft="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"/>
 
         <EditText
             android:textStyle="bold"
@@ -200,21 +203,22 @@
 
         >
 
-    <TextView
-        android:shadowColor="#fff"
-        android:shadowDx="22"
-        android:shadowDy="22"
-        android:shadowRadius="22"
-        android:text="Major "
-        android:textColor="@color/white"
-        android:textSize="15dp"
-        android:layout_marginLeft="60dp"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"/>
+        <TextView
+            android:shadowColor="#fff"
+            android:shadowDx="22"
+            android:shadowDy="22"
+            android:shadowRadius="22"
+            android:text="Major "
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:layout_marginLeft="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"/>
 
         <EditText
             android:textStyle="bold"
             android:textSize="12dp"
+            android:hint="Major"
             android:textColor="@color/black"
             android:id="@+id/modi_usermajor"
             android:layout_marginLeft="68dp"
