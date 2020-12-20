@@ -64,12 +64,12 @@ public class ListActivity extends AppCompatActivity {
 
             while (cursor.moveToNext()){
 
-                int sno = cursor.getInt(1);
-                String username = cursor.getString(2);
-                String userid = cursor.getString(3);
-                String userpw = cursor.getString(4);
-                String usermajor = cursor.getString(5);
-                String usertel = cursor.getString(6);
+                int sno = cursor.getInt(0);
+                String username = cursor.getString(1);
+                String userid = cursor.getString(2);
+                String userpw = cursor.getString(3);
+                String usermajor = cursor.getString(4);
+                String usertel = cursor.getString(5);
 
                 student = new Student(sno,username,userid,userpw,usermajor,usertel);
                 data.add(student);
@@ -88,94 +88,12 @@ public class ListActivity extends AppCompatActivity {
         //DB에서 받아온 값 넣어주세요-----------------
 
 
-//        adapter = new StudentAdapter(ListActivity.this,R.layout.student_layout,data);
-//        listView.setAdapter(adapter);
-
-
-
-
-
 
         // Context는 Activity
         adapter = new StudentAdapter(ListActivity.this, R.layout.activity_list, data);
         listView.setAdapter(adapter);
 
-//        btn_search.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                String edit = edit_search.getText().toString();
-//
-//                switch (edit.length()){
-//                    case 0:
-//                        try {
-//                            DB=studentInfo.getReadableDatabase();
-//                            String query = "SELECT sno, usename, userid, userpw, usermajor, usertel FROM student;";
-//                            Cursor cursor = DB.rawQuery(query,null);
-//                            StringBuffer stringBuffer = new StringBuffer();
-//
-//                            while (cursor.moveToNext()){
-//
-//                                int sno = cursor.getInt(1);
-//                                String username = cursor.getString(2);
-//                                String userid = cursor.getString(3);
-//                                String userpw = cursor.getString(4);
-//                                String usermajor = cursor.getString(5);
-//                                String usertel = cursor.getString(6);
-//
-//                                student = new Student(sno,username,userid,userpw,usermajor,usertel);
-//                                data.add(student);
-//
-//                            }
-//
-//                            cursor.close();
-//                            studentInfo.close();
-//                            Toast.makeText(ListActivity.this,"Select Ok", Toast.LENGTH_SHORT).show();
-//                        }catch (Exception e){
-//                            e.printStackTrace();
-//                            Toast.makeText(ListActivity.this,"select Error", Toast.LENGTH_SHORT).show();
-//                        }
-//                        listView.setAdapter(adapter);
-//
-//                        break;
-//
-//                    default:
-//                        try {
-//                            DB=studentInfo.getReadableDatabase();
-//                            String query = "SELECT sno, usename, userid, userpw, usermajor, usertel FROM student where username = edit;";
-//                            Cursor cursor = DB.rawQuery(query,null);
-//                            StringBuffer stringBuffer = new StringBuffer();
-//
-//
-//                            while (cursor.moveToNext()){
-//
-//                                int sno = cursor.getInt(1);
-//                                String username = cursor.getString(2);
-//                                String userid = cursor.getString(3);
-//                                String userpw = cursor.getString(4);
-//                                String usermajor = cursor.getString(5);
-//                                String usertel = cursor.getString(6);
-//
-//                                student = new Student(sno,username,userid,userpw,usermajor,usertel);
-//                                data.add(student);
-//
-//
-//                            }
-//
-//                            cursor.close();
-//                            studentInfo.close();
-//                            Toast.makeText(ListActivity.this,"Select Ok", Toast.LENGTH_SHORT).show();
-//                        }catch (Exception e){
-//                            e.printStackTrace();
-//                            Toast.makeText(ListActivity.this,"select Error", Toast.LENGTH_SHORT).show();
-//                        }
-//                        listView.setAdapter(adapter);
-//                        break;
-//                }
-//
-//
-//
-//            }
-//        });
+
 
     adapter.setOnItemClickListener(new StudentAdapter.OnItemClickListener() {
         @Override
@@ -186,6 +104,8 @@ public class ListActivity extends AppCompatActivity {
             String uusermajor = data.get(position).getUsermajor();
             String uusertel = data.get(position).getUsertel();
             String uuserpw = data.get(position).getUserpw();
+
+            //Toast.makeText(ListActivity.this,uuserid,Toast.LENGTH_SHORT).show();
 
             Intent intent = new Intent(ListActivity.this,UpdateActivity.class);
 
