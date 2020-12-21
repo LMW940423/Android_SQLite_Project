@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@drawable/backgroud"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/update_linear_outside"
+    tools:context=".UpdateActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shadowColor="#fff"
+            android:shadowDx="22"
+            android:shadowDy="22"
+            android:shadowRadius="22"
+            android:text="Modification"
+            android:textColor="@color/white"
+            android:textSize="25dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_marginTop="140dp"
+            android:text="Roll_Number "
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:shadowColor="#fff"
+            android:shadowDx="22"
+            android:shadowDy="22"
+            android:shadowRadius="22"
+            android:layout_marginLeft="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"/>
+
+        <EditText
+            android:id="@+id/modi_sno"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:textColor="@color/black"
+            android:enabled="false"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/edittext_rounded_corner_rectangl"
+            android:layout_marginTop="140dp"
+            android:layout_width="150dp"
+            android:layout_height="26dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        >
+
+        <TextView
+            android:shadowColor="#fff"
+            android:shadowDx="22"
+            android:shadowDy="22"
+            android:shadowRadius="22"
+            android:text="User_ID "
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:layout_marginLeft="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"/>
+
+        <EditText
+            android:enabled="false"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:textColor="@color/black"
+            android:id="@+id/modi_userid"
+            android:layout_marginLeft="55dp"
+            android:background="@drawable/edittext_rounded_corner_rectangl"
+            android:layout_marginTop="5dp"
+            android:layout_width="150dp"
+            android:text=""
+            android:layout_height="26dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        >
+
+        <TextView
+            android:shadowColor="#fff"
+            android:shadowDx="22"
+            android:shadowDy="22"
+            android:shadowRadius="22"
+            android:text="Password "
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:layout_marginLeft="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"/>
+
+        <EditText
+
+            android:inputType="textPassword"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:textColor="@color/black"
+            android:id="@+id/modi_userpw"
+            android:layout_marginLeft="40dp"
+            android:hint="Password"
+            android:background="@drawable/edittext_rounded_corner_rectangl"
+            android:layout_marginTop="5dp"
+            android:layout_width="150dp"
+            android:layout_height="26dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+
+        >
+
+        <TextView
+            android:shadowColor="#fff"
+            android:shadowDx="22"
+            android:shadowDy="22"
+            android:shadowRadius="22"
+            android:text="Name "
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:layout_marginLeft="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"/>
+
+        <EditText
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:textColor="@color/black"
+            android:id="@+id/modi_username"
+            android:layout_marginLeft="65dp"
+            android:background="@drawable/edittext_rounded_corner_rectangl"
+            android:layout_marginTop="5dp"
+            android:layout_width="150dp"
+            android:layout_height="26dp"
+            android:hint="Name"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+
+        >
+
+        <TextView
+            android:shadowColor="#fff"
+            android:shadowDx="22"
+            android:shadowDy="22"
+            android:shadowRadius="22"
+            android:text="Tel_Number "
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:layout_marginLeft="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"/>
+
+        <EditText
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:textColor="@color/black"
+            android:inputType="phone"
+            android:id="@+id/modi_usertel"
+            android:layout_marginLeft="25dp"
+            android:hint="Phone_number"
+            android:background="@drawable/edittext_rounded_corner_rectangl"
+            android:layout_marginTop="5dp"
+            android:layout_width="150dp"
+            android:layout_height="26dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+
+        >
+
+        <TextView
+            android:shadowColor="#fff"
+            android:shadowDx="22"
+            android:shadowDy="22"
+            android:shadowRadius="22"
+            android:text="Major "
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:layout_marginLeft="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"/>
+
+        <EditText
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:hint="Major"
+            android:textColor="@color/black"
+            android:id="@+id/modi_usermajor"
+            android:layout_marginLeft="68dp"
+            android:background="@drawable/edittext_rounded_corner_rectangl"
+            android:layout_marginTop="5dp"
+            android:layout_width="150dp"
+            android:layout_height="26dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="100dp"
+            android:backgroundTint="#2D1B4E"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="cancel"
+            />
+        <Button
+            android:id="@+id/modi_btn"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            android:backgroundTint="#42217C"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Modify"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
