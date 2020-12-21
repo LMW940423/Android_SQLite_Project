@@ -32,11 +32,6 @@ public class DeleteActivity extends Activity {
 
         studentInfo = new StudentInfo(DeleteActivity.this);
 
-        findViewById(R.id.btn_delete).setOnClickListener(mClickListener);
-
-        del_userpw.addTextChangedListener(new PhoneNumberFormattingTextWatcher());
-        //비번 안보이게.
-        del_userpw.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
 
         del_sno = findViewById(R.id.tv_sno);
         del_userid = findViewById(R.id.tv_userid);
@@ -59,6 +54,11 @@ public class DeleteActivity extends Activity {
         del_username.setText(username1);
         del_usertel.setText(usertel);
         del_usermajor.setText(usermajor);
+        findViewById(R.id.btn_delete).setOnClickListener(mClickListener);
+
+        del_userpw.addTextChangedListener(new PhoneNumberFormattingTextWatcher());
+        //비번 안보이게.
+        del_userpw.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
     }
     //밑에 삭제버튼임
     View.OnClickListener mClickListener = new View.OnClickListener() {
@@ -66,14 +66,19 @@ public class DeleteActivity extends Activity {
         @Override
         public void onClick(View v) {
             try {
+
                 DB = studentInfo.getWritableDatabase();
                 String query = "DELETE from student where sno ="+sno;
                 Cursor cursor = DB.rawQuery(query,null);
                 StringBuffer stringBuffer = new StringBuffer();
 
+                Toast.makeText(DeleteActivity.this,"해당 정보가 삭제되었습니다.", Toast.LENGTH_SHORT).show();
                 DB.execSQL(query);
                 studentInfo.close();
-                Toast.makeText(DeleteActivity.this,"해당 정보가 삭제되었습니다.", Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                finish();
 
             }catch (Exception e){
                 e.printStackTrace();
