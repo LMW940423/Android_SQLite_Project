@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinnerArray">
+        <item>Select major</item>
+        <item>Computer Science</item>
+        <item>Business</item>
+        <item>Psychology</item>
+        <item>Science</item>
+        <item>Education</item>
+        <item>History</item>
+        <item>Engineering</item>
+        <item>Biological Science</item>
+    </string-array>
+</resources>
